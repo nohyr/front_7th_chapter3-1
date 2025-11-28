@@ -1,15 +1,19 @@
 import React from 'react'
-import { Header } from './components/organisms'
+import { ThemeProvider } from './components/theme-provider'
+import { ThemeToggle } from './components/ui/theme-toggle'
 import { ManagementPage } from './pages/ManagementPage'
-import './styles/components.css'
 
 export const App: React.FC = () => {
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#f7fafc' }}>
-      <Header />
-      <main>
-        <ManagementPage />
-      </main>
-    </div>
+    <ThemeProvider defaultTheme="light" storageKey="management-ui-theme">
+      <div className="min-h-screen">
+        <div className="fixed top-4 right-4 z-50">
+          <ThemeToggle />
+        </div>
+        <main>
+          <ManagementPage />
+        </main>
+      </div>
+    </ThemeProvider>
   );
 };
