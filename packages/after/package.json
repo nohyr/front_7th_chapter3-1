@@ -8,9 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "test:run": "vitest run",
+    "test": "vitest --config vitest.config.ts",
+    "test:ui": "vitest --ui --config vitest.config.ts",
+    "test:run": "vitest run --config vitest.config.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "deploy": "gh-pages -d dist"
