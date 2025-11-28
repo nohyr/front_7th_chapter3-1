@@ -4,6 +4,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/front_7th_chapter3-1/',
   plugins: [react()],
   resolve: {
     alias: {
